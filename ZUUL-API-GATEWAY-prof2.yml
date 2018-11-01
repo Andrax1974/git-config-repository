@@ -20,6 +20,8 @@ hystrix:
           thread:
             timeoutInMilliseconds: 60000
             
+ 
+            
             
 PRICEART-SERVER:
   ribbon:
@@ -29,6 +31,8 @@ PRICEART-SERVER:
     ReadTimeout: 5000
     MaxTotalHttpConnections: 500
     MaxConnectionsPerHost: 100
+    eureka:
+         enabled: false
 
       
       
