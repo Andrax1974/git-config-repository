@@ -12,8 +12,8 @@ zuul:
       path: /getprice/**
       serviceId: PRICEART-SERVER
       sensitive-headers: Cookie,Set-Cookie
+     #http://localhost:8765/api/getart/articoli/cerca/codice/002001801 
     article: 
-      stripPrefix: false
       path: /getart/**
       serviceId: ART-SERVER
       sensitive-headers: Cookie,Set-Cookie
