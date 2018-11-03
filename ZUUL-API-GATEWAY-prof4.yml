@@ -3,7 +3,6 @@ zuul:
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 60000
-  prefix: /api
   ignoredServices: '*'
   routes:
     auth-service:
@@ -13,12 +12,14 @@ zuul:
       sensitive-headers: Cookie,Set-Cookie
      #http://localhost:8765/api/getprice/prezzi/002001801
     price: 
+      prefix: /api
       path: /getprice/**
       serviceId: PRICEART-SERVER
       stripPrefix: true
       sensitive-headers: Cookie,Set-Cookie
      #http://localhost:8765/api/getart/articoli/cerca/codice/002001801 
     article: 
+      prefix: /api
       path: /getart/**
       serviceId: ART-SERVER
       stripPrefix: true
